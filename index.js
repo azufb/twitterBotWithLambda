@@ -10,7 +10,8 @@ const client = new Twitter({
 
 exports.handler = () => {
     let date = new Date().toLocaleString('ja-JP');
-    const tweetText = {status: `テスト投稿 ${date}`}
+    const text = '今日もお疲れ様でした〜😆'
+    const tweetText = { status: `${text}\r\n${date}` }
 
     client.post('statuses/update', tweetText, function(error, tweet, response) {
         if (error) throw error;
