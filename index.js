@@ -13,7 +13,7 @@ exports.handler = () => {
     const text = '今日もお疲れ様でした〜😆'
     const tweetText = { status: `${text}\r\n${date}` }
 
-    client.post('statuses/update', tweetText, function(error, tweet, response) {
+    client.post('statuses/update', tweetText, (error, tweet, response) => {
         if (error) throw error;
         console.log(tweet);
         console.log(response);
