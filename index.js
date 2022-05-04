@@ -9,7 +9,7 @@ const client = new Twitter({
 });
 
 exports.handler = () => {
-    let date = new Date().toLocaleString('ja-JP');
+    const date = new Date().toLocaleString('ja-JP');
     const text = '今日もお疲れ様でした〜😆'
     const tweetText = { status: `${text}\r\n${date}` }
 
